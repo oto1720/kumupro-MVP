@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kumupro_mvp/config/routes.dart';
+import 'package:kumupro_mvp/config/theme.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -9,16 +10,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-       
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      title: 'KumuPro MVP',
+      theme: AppTheme.lightTheme,
       routerConfig: router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
